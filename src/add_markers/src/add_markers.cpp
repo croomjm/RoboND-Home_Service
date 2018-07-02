@@ -32,6 +32,8 @@ const float positionError(const geometry_msgs::Pose &bot, const geometry_msgs::P
 }
 
 const float headingError(const geometry_msgs::Pose &bot, const geometry_msgs::Pose &goal){
+  //not fully implemented at this time
+  
   //tf::Vector3 botXaxis;
   //botXaxis.x = 1.0;
   //botXaxis.y = 0.0;
@@ -61,7 +63,7 @@ void poseCallback(const nav_msgs::Odometry::ConstPtr &msg){
     poseAchieved = true;
   }else{
     ROS_INFO("Current pose error exceeds pose tolerance of %f radians (heading) and %f meters (position)", headingTolerance, positionTolerance);
-    ROS_INFO("Heading Error: %f", headingErr);
+    ROS_INFO("Heading Error: Ignored", headingErr);
     ROS_INFO("Position Error: %f\n", positionErr);
   }  
 } 

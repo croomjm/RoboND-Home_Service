@@ -1,0 +1,1 @@
+yes | cp -rf ../RvizConfig/navigation.rviz ../turtlebot_interactions/turtlebot_rviz_launchers/rviz/
