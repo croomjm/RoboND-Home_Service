@@ -16,7 +16,7 @@ The project incorporates a number of elements that would actually be required to
 This repository is intended to run only on Linux (Ubuntu) ROS. These instructions assume that your catkin directory exists at /home/workspace/catkin_ws and has already been initialized (see (here)[http://wiki.ros.org/catkin/Tutorials/create_a_workspace]).
 
 To install, clone the repository to /home/workspace/catkin_ws. The command below will pull all required submodules and copy directly to catkin_ws (rather than catkin_ws/RoboND-Home_Service).
-`git clone --recurse-submodules https://github.com/croomjm/RoboND-Home_Service.git origin-url .`
+`git clone --recurse-submodules https://github.com/croomjm/RoboND-Home_Service.git .`
 
 Once all the necessary files are in place, run the following commands from the catkin_ws directory:
 1. `source devel/setup.bash`
