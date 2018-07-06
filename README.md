@@ -15,14 +15,16 @@ The project incorporates a number of elements that would actually be required to
 # Installation
 This repository is intended to run only on Linux (Ubuntu) ROS. These instructions assume that your catkin directory exists at /home/workspace/catkin_ws and has already been initialized (see (here)[http://wiki.ros.org/catkin/Tutorials/create_a_workspace]).
 
-To install, clone the repository to /home/workspace/catkin_ws. Once all the necessary files are in place, run the following commands from the catkin_ws directory:
+To install, clone the repository to /home/workspace/catkin_ws. The command below will pull all required submodules and copy directly to catkin_ws (rather than catkin_ws/RoboND-Home_Service).
+`git clone --recurse-submodules https://github.com/croomjm/RoboND-Home_Service.git .`
+
+Once all the necessary files are in place, run the following commands from the catkin_ws directory:
 1. `source devel/setup.bash`
 2. `catkin_make`
 3. `sudo chmod +x src/ShellScripts/*.sh` (Make the launcher shell scripts executable)
 
-The default rviz configuration can be updated to show the marker locations by either:
-1. Running `/home/workspace/catkin_ws/src/ShellScripts/setup_rviz_config.sh`
-2. Executing `cp /home/workspace/catkin_ws/src/RVizConfig/navigation.rviz /home/workspace/catkin_ws/src/turtlebot_interactions/turtlebot_rviz_launchers/rviz/`
+The default rviz configuration can be updated to show the marker locations by executing:
+`cp /home/workspace/catkin_ws/src/RVizConfig/navigation.rviz /home/workspace/catkin_ws/src/turtlebot_interactions/turtlebot_rviz_launchers/rviz/`
 
 # Running the Simulation
 You're ready to go! The fully functional simulation can be run (from catkin_ws/) with the following command:
